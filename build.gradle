@@ -152,7 +152,7 @@ reobf {
     deobfFile = new net.minecraftforge.gradle.delayed.DelayedFile(project, "build/tmp/deobfBinJar/deobfed.jar")
 }
 
-dependencies {	compile files('external/industrialcraft-2-2.1.477-experimental-api.jar') }
+//dependencies {	compile files('external/industrialcraft-2-2.1.477-experimental-api.jar') }
 
 // eclipse settings
 //

@@ -1,4 +1,5 @@
 *.bak
+*.class
 .gradle/
 .settings/
 bin/
@@ -13,6 +14,7 @@ saves/
 stats/
 world/
 run/
+crash-reports/
 
 .classpath
 .project
