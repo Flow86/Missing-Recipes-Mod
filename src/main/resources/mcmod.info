@@ -1,0 +1,15 @@
+{
+  "modinfoversion": 2,
+  "modlist": [{
+    "modid": "Missing-Recipes-Mod",
+    "name": "Missing-Recipes-Mod",
+    "description": "Add some missing recipes.",
+    "version": "${version}",
+    "mcversion": "${mc_version}",
+    "url": "https://github.com/Flow86/Edit-Signs-Mod",
+    "updateUrl": "",
+    "authors": [ "Flow86" ],
+    "credits": "Authored by Flow86",
+    "logoFile": "/assets/missing-recipes/logo.png"
+  }]
+}
