@@ -1,5 +1,5 @@
 @ECHO OFF
 
-gradlew -info clean setupDecompWorkSpace eclipse %*
+cmd /c gradlew -info clean setupDecompWorkSpace eclipse %*
 
 pause
