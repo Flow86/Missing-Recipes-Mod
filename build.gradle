@@ -34,7 +34,7 @@ archivesBaseName = 'missingrecipes'
 minecraft {
     version = "1.7.2-10.12.2.1147"
     
-    assetDir = "run/assets"
+    runDir = "run/assets"
 }
 
 ///////////////////////////////////////////////////////////////////////////////
