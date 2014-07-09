@@ -32,9 +32,9 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 
-@Mod(name = "Missing-Recipes", version = missingrecipes.VERSION, useMetadata = false, modid = "Missing-Recipes", dependencies = "required-after:Forge@[10.12.2.1147,);after:Forestry@[2.4.1.27,);after:IC2@[2.1.477,)")
+@Mod(name = "Missing-Recipes", version = missingrecipes.VERSION, useMetadata = false, modid = "Missing-Recipes", dependencies = "required-after:Forge@[10.12.2.1147,);after:Forestry@[2.4.1.27,);after:IC2@[2.1.477,)", acceptableRemoteVersions = "*")
 public class missingrecipes {
-	public static final String VERSION = "@MR_VERSION@";
+	public static final String VERSION = "$version";
 
 	public static Logger logger = null;
 
