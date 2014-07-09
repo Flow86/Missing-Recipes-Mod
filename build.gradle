@@ -33,6 +33,8 @@ archivesBaseName = 'missingrecipes'
 
 minecraft {
     version = "1.7.2-10.12.2.1147"
+    
+    assetDir = "run/assets"
 }
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -135,24 +137,21 @@ jar {
 
 task deobfJar(type: Jar) {
     from sourceSets.main.output
-    appendix = 'deobf'
+    classifier = 'dev'
 
     manifest {
         attributes 'MCVersion'    : project.minecraft.version
         attributes 'Version'      : project.version
     }
 }
+
+// make sure all of these happen when we run build
+build.dependsOn deobfJar
  
 artifacts {
+    // the default jar is already here by default
     archives deobfJar
 }
-
-// temporary fix for "deobfFile"-Bug #46
-reobf { 
-    deobfFile = new net.minecraftforge.gradle.delayed.DelayedFile(project, "build/tmp/deobfBinJar/deobfed.jar")
-}
-
-//dependencies {	compile files('external/industrialcraft-2-2.1.477-experimental-api.jar') }
 
 // eclipse settings
 //
