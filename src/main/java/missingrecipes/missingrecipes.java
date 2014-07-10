@@ -117,6 +117,18 @@ public class missingrecipes {
 	@Method(modid = "IC2")
 	public void addRecipesIC2() {
 
+		// split dense ores in normal ores
+		if (Loader.isModLoaded("denseores")) {
+			for (String denseOreName : OreDictionary.getOreNames()) {
+				if (denseOreName.startsWith("denseore")) {
+					String normalOreName = denseOreName.substring(5);
+					ItemStack normalOre = getFromOreDictionary(normalOreName);
+					logger.info("Adding Macerator-Recipe: " + denseOreName + ",1 -> " + normalOre + ",4");
+					Recipes.macerator.addRecipe(new RecipeInputOreDict(denseOreName, 1), null, new ItemStack(normalOre.getItem(), 4));
+				}
+			}
+		}
+
 		// nether quartz ore -> 4
 		ItemStack quartzGem = getFromOreDictionary("gemQuartz");
 		if (quartzGem != null) {
