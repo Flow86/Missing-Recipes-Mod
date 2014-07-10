@@ -117,6 +117,13 @@ public class missingrecipes {
 	@Method(modid = "IC2")
 	public void addRecipesIC2() {
 
+		// nether quartz ore -> 4
+		ItemStack quartzGem = getFromOreDictionary("gemQuartz");
+		if (quartzGem != null) {
+			logger.info("Adding Macerator-Recipe: quartzOre,1 -> quartzGem,4");
+			Recipes.macerator.addRecipe(new RecipeInputOreDict("oreQuartz", 1), null, new ItemStack(quartzGem.getItem(), 4));
+		}
+
 		// apatite ore -> 6
 		ItemStack apatiteGem = getFromOreDictionary("gemApatite");
 		if (apatiteGem != null) {
