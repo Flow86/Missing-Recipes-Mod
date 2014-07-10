@@ -119,8 +119,10 @@ public class missingrecipes {
 
 		// split dense ores in normal ores
 		if (Loader.isModLoaded("denseores")) {
+			logger.info("Found DenseOres, so trying to add additional recipes.");
 			for (String denseOreName : OreDictionary.getOreNames()) {
-				if (denseOreName.startsWith("denseore")) {
+				logger.debug("Ore Dictionary: " + denseOreName);
+				if (denseOreName.startsWith("dense")) {
 					String normalOreName = denseOreName.substring(5);
 					ItemStack normalOre = getFromOreDictionary(normalOreName);
 					logger.info("Adding Macerator-Recipe: " + denseOreName + ",1 -> " + normalOre + ",4");
